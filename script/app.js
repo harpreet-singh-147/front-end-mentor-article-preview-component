@@ -49,14 +49,6 @@ btnShare.addEventListener('click', e => {
   }
 });
 
-closeShareIconsBtn.addEventListener('click', e => {
-  if (closeShareIconsBtn.contains(e.target)) {
-    if (isTouchDevice()) {
-      toggleShareIcons();
-    }
-  }
-});
-
 shareIcons.addEventListener('click', e => {
   if (shareIcons.contains(e.target)) {
     if (isTouchDevice()) {
@@ -92,7 +84,13 @@ document.addEventListener('click', e => {
   } else {
     const isExpanded = btnShare.getAttribute('aria-expanded') === 'true';
     if (isExpanded) {
-      toggleShareIcons();
+      collapsedShareIcons();
     }
+  }
+});
+
+document.addEventListener('click', e => {
+  if (e.target.closest('.decor-tips__share-svg--secondary--list-item')) {
+    collapsedShareIcons();
   }
 });
