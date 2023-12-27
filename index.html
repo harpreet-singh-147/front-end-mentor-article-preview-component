@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Article preview component</title>
   <link rel="stylesheet" href="css/style.css">
+  <script src="script/app.js" defer></script>
 </head>
 
 <body>
@@ -31,10 +32,48 @@
               <time datetime="2020-06-28" class="decor-tips__date-published">28 Jun 2020</time>
             </figcaption>
           </figure>
-          <button class="decor-tips__btn-share" aria-haspopup="true" aria-expanded="false">
-            <img src="images/icon-share.svg" alt="Share this content">
+          <button class="decor-tips__btn-share" aria-haspopup="true" aria-expanded="false"
+            aria-label="Share this content">
+            <svg class="decor-tips__share-svg decor-tips__share-svg--primary" xmlns="http://www.w3.org/2000/svg"
+              width="15" height="13">
+              <title>Share this content</title>
+              <path class="first-svg" fill="currentColor"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+            </svg>
             <div class="decor-tips__share-icons" aria-hidden="true">
-              <!-- Social media icons will go here -->
+              <p class="decor-tips__share-text">Share</p>
+              <ul class="decor-tips__share-icons-list">
+                <li class="decor-tips__share-icon-list-item">
+                  <a href="https://www.facebook.com/" class="decor-tips__share-icon-link" aria-label="Share on Facebook"
+                    target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">
+                    <img src="images/icon-facebook.svg" alt="Facebook Icon" class="decor-tips__share-icon">
+                  </a>
+                </li>
+                <li class="decor-tips__share-icon-list-item">
+                  <a href="https://twitter.com/" class="decor-tips__share-icon-link" aria-label="Share on Twitter"
+                    rel="noopener noreferrer" referrerpolicy="no-referrer" target="_blank">
+                    <img src="images/icon-twitter.svg" alt="Twitter Icon" class="decor-tips__share-icon">
+                  </a>
+                </li>
+                <li class="decor-tips__share-icon-list-item">
+                  <a href="https://www.pinterest.com/" class="decor-tips__share-icon-link"
+                    aria-label="Share on Pinterest" rel="noopener noreferrer" referrerpolicy="no-referrer"
+                    target="_blank">
+                    <img src="images/icon-pinterest.svg" alt="Pinterest Icon" class="decor-tips__share-icon">
+                  </a>
+                </li>
+                <li class="decor-tips__share-icon-list-item decor-tips__share-svg--secondary--list-item">
+                  <a href="#" class="test" aria-label="Close share options"
+                    class="decor-tips__share-svg--secondary-link">
+                    <svg class="decor-tips__share-svg decor-tips__share-svg--secondary"
+                      xmlns="http://www.w3.org/2000/svg" width="15" height="13">
+                      <title>Close sharing options</title>
+                      <path fill="currentColor"
+                        d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </button>
         </footer>
